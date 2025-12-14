@@ -1,40 +1,113 @@
-Cahier des charges – Système de gestion de dépôt de cours
-________________________________________
+# 📚 Course Management System
 
-✅ 1. Présentation du projet
-Ce système permet aux enseignants de déposer des documents pédagogiques (matières, cours, travaux, etc.), de fixer des espaces de remise et des deadlines, et aux étudiants de consulter les cours et de soumettre leurs travaux dans les délais impartis.
-________________________________________
+## 🧾 Project Overview
 
-✅ 2. Les besoins fonctionnels
-Les besoins fonctionnels décrivent ce que le système doit faire.
-2.1. Authentification
-•	Connexion avec identifiant et mot de passe
-•	Différenciation des rôles (enseignant ou étudiant)
-•	Création de compte (optionnel, selon le niveau du projet)
+The **Course Management System** is a platform that allows **teachers** to upload and manage educational resources (courses, assignments, practical work, etc.) and **students** to consult courses and submit their work before defined deadlines.
 
-2.2. Côté Enseignant
-•	Ajouter un type cours
-•	Ajouter un cours (titre, matière, fichier associé)
-•	Définir une deadline (si nécessaire, selon le type de cours – ex : TP)
-•	Créer un espace de remise lié à un cours (automatique si deadline définie)
-•	Consulter les remises des étudiants
-•	Télécharger les devoirs remis
-•	Notation
+The system is designed to simplify course distribution, assignment submission, and evaluation in an academic environment.
 
-2.3. Côté Étudiant
-•	Consulter la liste des cours disponibles avec leur date limite par matière
-•	Télécharger les cours
-•	Soumettre un travail dans l’espace de remise
-•	Consulter les travaux remis
-•	Commentaire ou messagerie
+---
 
-________________________________________
-✅ 3. Les besoins non fonctionnels
-Les besoins non fonctionnels définissent les contraintes de qualité, de performance, de sécurité, etc.
-Catégorie	Besoins non fonctionnels
-Ergonomie	Interface simple, claire, adaptée aux deux profils (étudiant, enseignant).
-Sécurité	Authentification sécurisée, gestion des rôles, chiffrement des mots de passe.
-Performance	Temps de réponse rapide (< 2 secondes) pour consultation ou dépôt.
-Stockage	Gestion efficace des fichiers, capacité à stocker jusqu'à 50 Mo par fichier.
-Disponibilité	Le service doit être disponible 24h/24 avec un minimum d’interruptions.
+## 🎯 Main Objectives
 
+* Centralize course materials in one platform
+* Allow teachers to define deadlines and collect student submissions
+* Enable students to access courses and submit assignments easily
+* Ensure secure access with role-based permissions
+
+---
+
+## 👥 User Roles
+
+### 👨‍🏫 Teacher
+
+* Upload courses and educational materials
+* Define deadlines for assignments
+* Access student submissions
+* Download submitted work
+* Assign grades and feedback
+
+### 👨‍🎓 Student
+
+* View available courses by subject
+* Download course materials
+* Submit assignments before deadlines
+* View submitted work
+* Communicate via comments or messaging (optional)
+
+---
+
+## 🔐 Functional Requirements
+
+### 1. Authentication
+
+* Login using username/email and password
+* Role-based access (Teacher / Student)
+* Account creation (optional)
+
+### 2. Teacher Features
+
+* Add course type (Course, TD, TP, etc.)
+* Create a course (title, subject, file upload)
+* Define a deadline (optional depending on course type)
+* Automatic creation of a submission space if a deadline exists
+* View student submissions
+* Download submitted files
+* Grade student work
+
+### 3. Student Features
+
+* View list of available courses by subject
+* See deadlines for each course
+* Download course files
+* Submit assignments in the submission space
+* View submitted assignments
+* Comment or message (optional feature)
+
+---
+
+## ⚙️ Non-Functional Requirements
+
+| Category     | Requirement                                                      |
+| ------------ | ---------------------------------------------------------------- |
+| Ergonomics   | Simple, clear, and user-friendly interface adapted to both roles |
+| Security     | Secure authentication, role management, password encryption      |
+| Performance  | Fast response time (< 2 seconds) for uploads and downloads       |
+| Storage      | Efficient file management, up to 50 MB per file                  |
+| Availability | System available 24/7 with minimal downtime                      |
+
+---
+
+## 🛠️ Technologies (To Be Defined)
+
+* Programming Language: **Java**
+* Architecture: Desktop or Web (depending on implementation)
+* Database: MySQL / SQLite / File-based storage
+* UI: JavaFX / Swing / Web UI
+
+---
+
+## 🚀 Future Improvements
+
+* Internal messaging system
+* Notifications for deadlines
+* Admin role
+* Advanced grading and feedback system
+
+---
+
+## 📌 Project Status
+
+🚧 **Work in progress** – Core features are partially implemented.
+
+---
+
+## 👤 Author
+
+* **Jasser Mhamdi**
+
+---
+
+## 📄 License
+
+This project is developed for educational purposes.
