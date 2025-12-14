@@ -33,7 +33,6 @@ The system is designed to simplify course distribution, assignment submission, a
 * Download course materials
 * Submit assignments before deadlines
 * View submitted work
-* Communicate via comments or messaging (optional)
 
 ---
 
@@ -43,7 +42,6 @@ The system is designed to simplify course distribution, assignment submission, a
 
 * Login using username/email and password
 * Role-based access (Teacher / Student)
-* Account creation (optional)
 
 ### 2. Teacher Features
 
@@ -62,7 +60,6 @@ The system is designed to simplify course distribution, assignment submission, a
 * Download course files
 * Submit assignments in the submission space
 * View submitted assignments
-* Comment or message (optional feature)
 
 ---
 
@@ -82,8 +79,8 @@ The system is designed to simplify course distribution, assignment submission, a
 
 * Programming Language: **Java**
 * Architecture: Desktop or Web (depending on implementation)
-* Database: MySQL / SQLite / File-based storage
-* UI: JavaFX / Swing / Web UI
+* Database: MySQL / File-based storage
+* UI: JavaFX
 
 ---
 
