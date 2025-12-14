@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="Controllers.MesCoursRemisesController"
+      spacing="15" styleClass="dashboard-container" stylesheets="@MesCoursRemises.css">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Mes Cours et Remises" styleClass="header-title"/>
+
+    <!-- Courses ComboBox -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Sélectionner un cours :" style="-fx-font-weight: bold;"/>
+        <ComboBox fx:id="coursesComboBox" prefWidth="300" promptText="Choisir un cours"/>
+    </HBox>
+
+    <!-- Submissions Table -->
+    <TableView fx:id="submissionsTable" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="colStudent" text="Étudiant" prefWidth="150"/>
+            <!--<TableColumn fx:id="colFile" text="Fichier" />-->
+            <TableColumn fx:id="colSubmittedAt" text="Date de soumission" prefWidth="150"/>
+            <TableColumn fx:id="colGrade" text="Note" prefWidth="100"/>
+            <TableColumn fx:id="colFeedback" text="Feedback" prefWidth="220"/>
+            <TableColumn fx:id="colIsLate" text="En retard" prefWidth="100"/>
+            <TableColumn fx:id="colActions" text="Actions" prefWidth="130"/>
+        </columns>
+    </TableView>
+
+</VBox>

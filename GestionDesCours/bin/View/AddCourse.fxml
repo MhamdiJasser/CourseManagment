@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Separator?>
+
+<VBox prefHeight="600.0" prefWidth="700.0" spacing="20.0" styleClass="card" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@AddCourse.css" fx:controller="Controllers.AddCourseController">
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+   <children>
+      <Label styleClass="header-title" text="Créer un Nouveau Cours" />
+      
+      <GridPane hgap="15.0" vgap="15.0">
+         <!-- Ligne 1: Titre du Cours -->
+         <Label style="-fx-font-weight: bold;" text="Titre du Cours :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+         <TextField fx:id="titleField" promptText="Ex: Introduction à la Programmation Orientée Objet" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+         
+         <!-- Ligne 2: Matière/Domaine -->
+         <Label style="-fx-font-weight: bold;" text="Matière/Domaine :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+         <ComboBox fx:id="matiereComboBox" prefWidth="250.0" promptText="Sélectionner une matière" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         
+         <!-- Ligne 3: Type de Cours -->
+         <Label style="-fx-font-weight: bold;" text="Type de Cours :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+         <ComboBox fx:id="typeComboBox" prefWidth="250.0" promptText="Sélectionner le type (Ex: Devoir, Examen, TP)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+         <!-- Ligne 4: Date Limite de Remise (Optionnel) -->
+         <Label fx:id="deadlineLabel" style="-fx-font-weight: bold;" text="Date Limite de Remise (Optionnel) :" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+         <DatePicker fx:id="deadlinePicker" promptText="JJ/MM/AAAA" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         
+      </GridPane>
+      
+      <Separator />
+      
+      <!-- Section Fichier -->
+      <VBox spacing="10.0">
+         <Label style="-fx-font-weight: bold;" text="Matériel de Cours (Fichier PDF/DOC) :" />
+         <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <TextField fx:id="filePathField" editable="false" HBox.hgrow="ALWAYS" promptText="Chemin du fichier sélectionné" />
+            <Button mnemonicParsing="false" onAction="#handleSelectFile" styleClass="secondary-button" text="Parcourir..." />
+         </HBox>
+         <Label fx:id="lblFilePathError" style="-fx-text-fill: #e74c3c; -fx-font-size: 11px;" visible="false" text="Veuillez sélectionner un fichier de cours." />
+      </VBox>
+      
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <Button mnemonicParsing="false" onAction="#handleClearForm" styleClass="secondary-button" text="Effacer" />
+         <Button mnemonicParsing="false" onAction="#handleSaveCourse" styleClass="primary-button" text="Ajouter le Cours" />
+      </HBox>
+      
+      <Label fx:id="lblStatus" style="-fx-font-weight: bold; -fx-text-fill: #2ecc71;" text="" />
+      
+   </children>
+</VBox>

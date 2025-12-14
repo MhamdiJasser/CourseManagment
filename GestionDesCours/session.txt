@@ -1,0 +1,3 @@
+NCIN=87654321
+role=enseignant
+username=Mme Fatma Souissi
