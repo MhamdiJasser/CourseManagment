@@ -78,7 +78,7 @@ The system is designed to simplify course distribution, assignment submission, a
 ## 🛠️ Technologies (To Be Defined)
 
 * Programming Language: **Java**
-* Architecture: Desktop or Web (depending on implementation)
+* Architecture: Desktop
 * Database: MySQL / File-based storage
 * UI: JavaFX
 
